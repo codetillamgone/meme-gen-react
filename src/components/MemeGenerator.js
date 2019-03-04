@@ -13,8 +13,8 @@ class MemeGenerator extends React.Component{
             allMemeImgs : []
         }
 
-        this.handleChange = this.handleChange.bind(this)
-        this.handleClick = this.handleClick.bind(this);
+       
+       
     }
 
     componentDidMount(){
@@ -26,13 +26,13 @@ class MemeGenerator extends React.Component{
             })
     }
 
-    handleChange(event){
+    handleChange = (event) => {
         const {name, type, value} = event.target
         this.setState({[name] : value})
         console.log("Working")
     }
 
-    handleClick(event){
+    handleClick = (event) =>{
         event.preventDefault();
         let maxLength = this.state.allMemeImgs.length;
         let minLength = 1;
